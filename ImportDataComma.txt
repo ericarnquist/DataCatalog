@@ -1,0 +1,2 @@
+Nancy,Luppes,Female,Red,12/15/1971
+Jamie,Luppes,Male,Black,12/10/1976

@@ -1,0 +1,2 @@
+C:\Development\DataCatalog\DataImport\bin\Debug\DataImport.exe.config
+C:\Development\DataCatalog\DataImport\obj\Debug\DataImport.csprojResolveAssemblyReference.cache

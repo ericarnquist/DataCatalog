@@ -1,0 +1,7 @@
+C:\Development\DataCatalog\DataCatalogApi.Tests\bin\Debug\DataCatalogApi.Tests.dll
+C:\Development\DataCatalog\DataCatalogApi.Tests\bin\Debug\DataCatalogApi.Tests.pdb
+C:\Development\DataCatalog\DataCatalogApi.Tests\bin\Debug\nunit.framework.dll
+C:\Development\DataCatalog\DataCatalogApi.Tests\bin\Debug\nunit.framework.xml
+C:\Development\DataCatalog\DataCatalogApi.Tests\obj\Debug\DataCatalogApi.Tests.csprojResolveAssemblyReference.cache
+C:\Development\DataCatalog\DataCatalogApi.Tests\obj\Debug\DataCatalogApi.Tests.dll
+C:\Development\DataCatalog\DataCatalogApi.Tests\obj\Debug\DataCatalogApi.Tests.pdb

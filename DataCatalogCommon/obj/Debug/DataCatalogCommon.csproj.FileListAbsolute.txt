@@ -1,0 +1,10 @@
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\DataCatalogCommon.dll
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\DataCatalogCommon.pdb
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\NLog.dll
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\nunit.framework.dll
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\NLog.xml
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\nunit.framework.xml
+C:\Development\DataCatalog\DataCatalogCommon\obj\Debug\DataCatalogCommon.dll
+C:\Development\DataCatalog\DataCatalogCommon\obj\Debug\DataCatalogCommon.pdb
+C:\Development\DataCatalog\DataCatalogCommon\obj\Debug\DataCatalogCommon.csprojResolveAssemblyReference.cache
+C:\Development\DataCatalog\DataCatalogCommon\bin\Debug\System.Linq.Dynamic.dll

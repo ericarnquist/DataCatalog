@@ -1,0 +1,2 @@
+Eric|Arnquist|Male|Blue|03/12/1979
+Jennifer|Arnquist|Female|Violet|04/24/1973
