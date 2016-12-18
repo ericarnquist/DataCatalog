@@ -10,8 +10,20 @@ using System.Threading.Tasks;
 
 namespace DataCatalogCommon.Domain.Factory
 {
+    /// <summary>
+    /// Factory object and methods for creating data objects.
+    /// </summary>
     public static class DataObjectFactory
     {
+        /// <summary>
+        /// Creates a Person object based on validated data attributes that are passed in.
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <param name="gender"></param>
+        /// <param name="favoriteColor"></param>
+        /// <param name="birthDate"></param>
+        /// <returns></returns>
         public static Person CreatePerson(string firstName, string lastName, Gender gender, string favoriteColor, DateTime birthDate)
         {
             Person person = new Person();
@@ -23,6 +35,12 @@ namespace DataCatalogCommon.Domain.Factory
             return person;
         }
 
+        /// <summary>
+        /// Validates raw data passed in attempts to create a Person object
+        /// from them.
+        /// </summary>
+        /// <param name="fields"></param>
+        /// <returns></returns>
         public static Person CreatePerson(string[] fields)
         {
             Person person = new Person();

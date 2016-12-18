@@ -15,7 +15,7 @@ namespace DataCatalogApi.Controllers
     public class PersonController : BaseController
     {
         /// <summary>
-        /// Get all the people that are stored in the data store
+        /// Get all the people that are stored in the data store.
         /// </summary>
         /// <param name="sort"></param>
         /// <returns>Sorted list of people in JSON</returns>
@@ -27,11 +27,11 @@ namespace DataCatalogApi.Controllers
         }
 
         /// <summary>
-        /// 
+        /// Post a new person to the data store.
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        [ResponseType(typeof(Person))]
+        [ResponseType(typeof(PersonModel))]
         public IHttpActionResult PostPerson(PersonModel personModel)
         {
             if(!ModelState.IsValid)

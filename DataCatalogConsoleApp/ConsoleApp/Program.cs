@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 namespace DataCatalogConsoleApp.ConsoleApp
 {
     /// <summary>
-    /// Main program class to launch the console application for the Data Catalog application
+    /// Main program class to launch the console application for the Data Catalog application.
+    /// This is version 1.0 of the console application.
     /// </summary>
     public class Program
     {
@@ -32,11 +33,7 @@ namespace DataCatalogConsoleApp.ConsoleApp
                 while (!exitApp)
                 {
                     //Generate the menu and prompt user for selection
-                    int itemSelected = -1;
-                    //if (commandResult == null || commandResult.IsCompleted)
-                    //{
-                        itemSelected = GetConsoleMenu(commands);
-                    //}
+                    int itemSelected = GetConsoleMenu(commands);
 
                     //Get the command for the item selected and execute it
                     commandToExecute = commands[itemSelected];
@@ -132,12 +129,19 @@ namespace DataCatalogConsoleApp.ConsoleApp
             int selectedMenuItemIndex = 0;
             ConsoleKeyInfo keyPressed;
 
+            // Continue while a menu item has not been selected by the user
             while (!menuItemSelected)
             {
                 for (int i = 0; i < menuItems.Count; i++)
                 {
+                    if (i == 0)
+                    {
+                        Console.WriteLine("Select one of the following options:");
+                    }
+                    // Generate the menu items
                     if (i == selectedMenuItemIndex)
                     {
+                        // Highlight the selected index
                         Console.BackgroundColor = ConsoleColor.Gray;
                         Console.ForegroundColor = ConsoleColor.Black;
                         Console.WriteLine(menuItems[i].ExecutionCommand + ". " + menuItems[i].Name);
@@ -149,8 +153,8 @@ namespace DataCatalogConsoleApp.ConsoleApp
                     }
                 }
 
+                //Capture the key and select accordingly
                 keyPressed = Console.ReadKey(true);
-
                 switch (keyPressed.Key)
                 {
                     case ConsoleKey.UpArrow:

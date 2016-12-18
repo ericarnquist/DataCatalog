@@ -7,12 +7,24 @@ using System.Web;
 
 namespace DataCatalogApi.Models
 {
+    /// <summary>
+    /// Class has factory methods used transfer model classes into
+    /// domain classes for use by the back end application.
+    /// </summary>
     public static class ModelToDomainObjectFactory
     {
+        /// <summary>
+        /// Creates a Person domain object based on the model passed into it. This method
+        /// will catch and rethrow an ApplicationException if there are any data format
+        /// issues with the model being passed in.
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
         public static Person CreatePersonFromModel(PersonModel model)
         {
             try
             {
+                // Convert the model into an array and pass into the object factory
                 string[] arrFields = new string[model.GetType().GetProperties().Length];
                 arrFields[0] = model.FirstName;
                 arrFields[1] = model.LastName;

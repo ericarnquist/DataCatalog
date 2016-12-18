@@ -14,23 +14,32 @@ namespace DataCatalogCommon.Validators
         //Default Constructor
         public FilePathValidator()
         {
-
         }
 
+        /// <summary>
+        /// Constructor passing in a string path to validate.
+        /// </summary>
+        /// <param name="pathToValidate"></param>
         public FilePathValidator(string pathToValidate)
         {
             ObjectToValidate = pathToValidate;
         }
 
+        /// <summary>
+        /// Validation method which uses the IO Path object to determine
+        /// if the passed in object is accessible on the local machine.
+        /// </summary>
+        /// <returns></returns>
         public override bool Validate()
         {
             string _path = "";
 
             try
             {
-                _path = ObjectToValidate as string;
+                _path = (string)ObjectToValidate;
 
-                string fullPath = Path.GetFullPath(ObjectToValidate as string);
+                // Get the full path, this will throw exceptions if invalid
+                string fullPath = Path.GetFullPath(_path);
                 if(!string.IsNullOrEmpty(fullPath))
                 {
                     return true;
@@ -41,11 +50,11 @@ namespace DataCatalogCommon.Validators
             }
             catch (InvalidCastException cExcp)
             {
+                // Catch an exception of the object is not a string
                 return HandleInvalidObjectTypeException(cExcp);
             }
             catch (Exception excp)
             {
-                //TODO: Log the exception
                 logger.Warn("The file path " + _path + " provided was not valid");
                 logger.Warn(excp.Message);
                 Message = "The path provided was invalid please provide a different path";

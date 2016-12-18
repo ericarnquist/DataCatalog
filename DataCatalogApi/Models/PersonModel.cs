@@ -2,8 +2,17 @@
 
 namespace DataCatalogApi.Models
 {
+    /// <summary>
+    /// Basic person model class used for receiving and sending data through the
+    /// REST api.
+    /// </summary>
     public class PersonModel
     {
+        public PersonModel()
+        {
+
+        }
+
         public PersonModel(string first, string last, string gender, string favoriteColor, string birthDate)
         {
             FirstName = first;

@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DataCatalogConsoleApp.Common
+﻿namespace DataCatalogConsoleApp.Common
 {
+    /// <summary>
+    /// Constants class including system wide static variables only
+    /// required by the console application.
+    /// </summary>
     public static class ConsoleApplicationConstants
     {
         //Command key constants

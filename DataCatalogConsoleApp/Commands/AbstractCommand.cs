@@ -11,7 +11,7 @@ namespace DataCatalogConsoleApp.Commands
     /// <summary>
     /// Abstract implementation of the ICommand interface includes
     /// base properties, logging facility and method implementations
-    /// which are common across all concrete classes.
+    /// which are common across all concrete commands.
     /// </summary>
     public abstract class AbstractCommand : ICommand
     {
@@ -60,12 +60,19 @@ namespace DataCatalogConsoleApp.Commands
             this.Inputs.Add(inputName, input);
         }
 
+        /// <summary>
+        /// Base implementation which iterates through each InputParameter
+        /// attached to the command and requests the parameter from the end
+        /// user through the console application. The method will continue
+        /// to prompt the user until they have entered a valid input value.
+        /// </summary>
         public void GetInputParameters()
         {
+            // Step through each item in the Dictionary
             foreach(KeyValuePair<string, IInputParameter> parameter in Inputs)
             {
+                // Set validation to false and continue until valid input is received
                 bool parameterValid = false;
-
                 while(!parameterValid)
                 {
                     parameterValid = parameter.Value.GetParameter();
@@ -77,7 +84,12 @@ namespace DataCatalogConsoleApp.Commands
         public abstract Task<bool> Execute();
         public abstract Task<bool> PrintOutput();
 
-        //Additional methods for use by the implementation classes
+        /// <summary>
+        /// Gets an HttpClient in order to perform REST service calls
+        /// to the Api.
+        /// </summary>
+        /// <param name="endPoint"></param>
+        /// <returns></returns>
         protected HttpClient GetDataCatalogHttpClient(string endPoint)
         {
             // If the rest client has not been created yet or the end point has changed update it

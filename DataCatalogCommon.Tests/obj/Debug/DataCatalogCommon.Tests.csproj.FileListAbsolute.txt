@@ -5,3 +5,8 @@ C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\nunit.framework.xml
 C:\Development\DataCatalog\DataCatalogCommon.Tests\obj\Debug\DataCatalogCommon.Tests.csprojResolveAssemblyReference.cache
 C:\Development\DataCatalog\DataCatalogCommon.Tests\obj\Debug\DataCatalogCommon.Tests.dll
 C:\Development\DataCatalog\DataCatalogCommon.Tests\obj\Debug\DataCatalogCommon.Tests.pdb
+C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\DataCatalogCommon.dll
+C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\NLog.dll
+C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\System.Linq.Dynamic.dll
+C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\DataCatalogCommon.pdb
+C:\Development\DataCatalog\DataCatalogCommon.Tests\bin\Debug\NLog.xml
